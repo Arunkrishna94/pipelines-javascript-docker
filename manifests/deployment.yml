@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: arunkrishnapipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: arunkrishnapipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: arunkrishnapipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: arunkrishnapipelinesjavascriptdocker 
+          image: myazuredemo.azurecr.io/arunkrishnapipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
